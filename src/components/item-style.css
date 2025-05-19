@@ -1,0 +1,45 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  & .checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #4CAF50;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      box-shadow: 0 0 5px #ccc;
+    }
+  }
+  & .text {
+    flex: 1;
+  }
+  & .actions {
+    display: flex;
+    column-gap: 5px;
+    & .edit-btn, .delete-btn, .update-btn, .cancel-btn {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+    & .edit-btn, .update-btn {
+      &:hover {
+        color: #2196F3;
+        box-shadow: 0 0 5px #2196F3;
+      }
+    }
+    & .delete-btn, .cancel-btn {
+      &:hover {
+        color: #f44336;
+        box-shadow: 0 0 5px #f44336;
+      }
+    }
+  }
+  & .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+}
